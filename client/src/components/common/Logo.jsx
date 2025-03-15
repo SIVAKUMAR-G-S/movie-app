@@ -1,12 +1,20 @@
-import { Typography, useTheme } from '@mui/material';
+import { Box } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Logo = () => {
-  const theme = useTheme();
-
   return (
-    <Typography fontWeight="700" fontSize="1.7rem">
-      Moon<span style={{ color: theme.palette.primary.main }}>Flix</span>
-    </Typography>
+    <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+      <Box sx={{ height: '40px' }}>
+        <img 
+          src="/logo.png" 
+          alt="Netflix" 
+          style={{ 
+            height: '100%',
+            objectFit: 'contain'
+          }} 
+        />
+      </Box>
+    </Link>
   );
 };
 
